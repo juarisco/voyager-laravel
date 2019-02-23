@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateInvoiceStatusTable extends Migration {
+class CreateCustomerAddressesTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,10 +12,11 @@ class CreateInvoiceStatusTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('invoice_status', function(Blueprint $table)
+		Schema::create('customer_addresses', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->text('description', 65535);
+			$table->integer('customer_id')->unsigned();
+			$table->string('address');
 			$table->timestamps();
 		});
 	}
@@ -28,7 +29,7 @@ class CreateInvoiceStatusTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('invoice_status');
+		Schema::drop('customer_addresses');
 	}
 
 }
