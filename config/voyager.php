@@ -164,7 +164,8 @@ return [
         ],
 
         'widgets' => [
-
+            \App\Widgets\Product::class,
+            \App\Widgets\Customer::class,
         ],
 
     ],
