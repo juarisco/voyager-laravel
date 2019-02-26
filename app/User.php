@@ -26,4 +26,7 @@ class User extends \TCG\Voyager\Models\User
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    const ADMIN = 1;
+    const CUSTOMER = 2;
 }
