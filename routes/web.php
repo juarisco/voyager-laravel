@@ -25,3 +25,7 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('exports', 'ExporterController@index')->middleware(ProtectExportables::class)->name('voyager.exports.index');
     Route::post('exports', 'ExporterController@export')->middleware(ProtectExportables::class)->name('voyager.exports.download');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
