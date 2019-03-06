@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cf52c4724821cdc3a6bb024a8e7a71b1",
+    "content-hash": "694103130cdb736c9bd0d0f346190fb4",
     "packages": [
         {
             "name": "arrilot/laravel-widgets",
@@ -4114,6 +4114,34 @@
                 "environment"
             ],
             "time": "2019-01-29T11:11:52+00:00"
+        },
+        {
+            "name": "voyager-themes",
+            "version": "0.15",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thedevdojo/voyager-themes.git",
+                "reference": "0.15"
+            },
+            "require": {
+                "larapack/hooks": "~1.0"
+            },
+            "type": "library",
+            "extra": {
+                "hook": {
+                    "providers": [
+                        "VoyagerThemes\\VoyagerThemesServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "VoyagerThemes\\": "src/"
+                }
+            },
+            "notification-url": "https://larapack.io/downloads",
+            "description": "This hook will add support for Voyager front-end themes",
+            "time": "2019-03-06T19:03:08+00:00"
         }
     ],
     "packages-dev": [

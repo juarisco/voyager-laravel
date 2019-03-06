@@ -1,1 +1,11 @@
-{}
+{
+    "last_remote_check": 1551905021,
+    "hooks": {
+        "voyager-themes": {
+            "name": "voyager-themes",
+            "description": "This hook will add support for Voyager front-end themes",
+            "version": "0.15",
+            "enabled": true
+        }
+    }
+}
