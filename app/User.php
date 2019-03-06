@@ -29,4 +29,9 @@ class User extends \TCG\Voyager\Models\User
 
     const ADMIN = 1;
     const CUSTOMER = 2;
+
+    public function customer()
+    {
+        return $this->hasOne(Customer::class);
+    }
 }
