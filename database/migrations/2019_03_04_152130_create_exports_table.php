@@ -3,7 +3,8 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateExportsTable extends Migration {
+class CreateExportsTable extends Migration
+{
 
 	/**
 	 * Run the migrations.
@@ -12,11 +13,10 @@ class CreateExportsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('exports', function(Blueprint $table)
-		{
+		Schema::create('exports', function (Blueprint $table) {
 			$table->increments('id');
-			$table->string('model', 50);
-			$table->dateTime('created_at')->nullable();
+			$table->string('model');
+			$table->dateTime('created_at');
 		});
 	}
 
@@ -30,5 +30,4 @@ class CreateExportsTable extends Migration {
 	{
 		Schema::drop('exports');
 	}
-
 }
